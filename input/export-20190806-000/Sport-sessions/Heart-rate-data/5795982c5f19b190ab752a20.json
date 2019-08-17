@@ -1,0 +1,6 @@
+[{"version":1,"timestamp":"2016-07-25 04:40:12 +0200","heart_rate":69,"signal_strength":0,"duration":1408,"distance":0},
+{"version":1,"timestamp":"2016-07-25 04:40:17 +0200","heart_rate":69,"signal_strength":0,"duration":6408,"distance":0},
+{"version":1,"timestamp":"2016-07-25 04:40:22 +0200","heart_rate":73,"signal_strength":0,"duration":11408,"distance":0},
+{"version":1,"timestamp":"2016-07-25 04:40:27 +0200","heart_rate":79,"signal_strength":0,"duration":16408,"distance":9},
+{"version":1,"timestamp":"2016-07-25 04:40:32 +0200","heart_rate":84,"signal_strength":0,"duration":21408,"distance":25},
+{"version":1,"timestamp":"2016-07-25 04:40:37 +0200","heart_rate":89,"signal_strength":0,"duration":26408,"distance":33}]
