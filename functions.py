@@ -5,7 +5,7 @@ import time
 import shutil
 from geopy.geocoders import Nominatim
 
-__VERSION__="V 1.2.4"
+__VERSION__="V 1.2.5"
 
 def readConfig(jsonFile):
     #Read JSON data into the datastore variable
@@ -50,5 +50,17 @@ def cpData(rootFolder,destFolder,srcFolder,subFolder,sid,test,singleFile):
 
 def getGeoLocation(lon,lat):
     geolocator = Nominatim(user_agent="ruCo")
-    location = geolocator.reverse(str(lat) + "," + str(lon))
-    return location.raw.get("address").get("suburb","Unknown"),location.raw.get("address").get("state","Unknown"),location.raw.get("address").get("country","Unknown")
+    timerCount = 0
+    #seconds
+    sleepTime = 10
+    while timerCount < 5:
+        try:
+            location = geolocator.reverse(str(lat) + "," + str(lon))
+            suburb,state,country = location.raw.get("address").get("suburb","Unknown"),location.raw.get("address").get("state","Unknown"),location.raw.get("address").get("country","Unknown")
+            timerCount = 100
+        except:
+            print("some  error")
+            suburb,state,country = "unknown_","unknown_","unknown_"
+            timerCount = timerCount + 1
+            time.sleep(timerCount * sleepTime)
+    return suburb,state,country

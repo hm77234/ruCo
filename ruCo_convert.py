@@ -72,7 +72,7 @@ def main(sid):
                 output.write("   <time>" + sessionDate +"</time>\n")
                 output.write("   <name>" + sportsType + "</name>\n")
                 if configData["getGeoInfo"] == 1:
-                    print(sportsData["longitude"])
+                    #print(sportsData["longitude"])
                     suburb,state,country = fc.getGeoLocation(sportsData["longitude"],sportsData["latitude"])
                     output.write("   <desc>" + suburb + ", " + state + ", " + country + "</desc>\n")
 

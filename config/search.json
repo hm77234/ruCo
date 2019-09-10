@@ -1,5 +1,5 @@
 {
-  "searchFilter":"2016-08-24:2016-09-04",
-  "searchMethod":"between",
+  "searchFilter":"2019-08-18",
+  "searchMethod":"from",
   "ignoreGPSCheck":1
 }
